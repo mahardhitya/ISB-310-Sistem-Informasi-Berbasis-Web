@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <body>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz SI WEB</title>
+
+
+    <button id="clickBtn">Click me!</button>
+
+    <div id="displayArea"></div>
+
+    <p>Click the button to see the counter increase.</p>
+    <p>Close the browser tab (or window), and try again, and the counter is reset.</p>
+
+    <script>
+        const btn = document.getElementById('clickBtn');
+        const display = document.getElementById('displayArea');
+
+    let count = localStorage.getItem('clickCount') ? parseInt(localStorage.getItem('clickCount')) : 0;
+
+    function updateUI() {
+        if (count > 0) {
+            display.innerHTML = `<p class="counter-msg">You have clicked the button ${count} time(s).</p>`;
+        } else {
+            display.innerHTML = '';
+        }
+    }
+
+    updateUI();
+
+    btn.addEventListener('click', function() {
+        count++;
+        localStorage.setItem('clickCount', count); 
+        updateUI();
+    });
+    </script>
+
+</body>
+</html> 
