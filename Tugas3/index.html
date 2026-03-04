@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <title>Preferensi Warna</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <div class="container">
+        <h1>Preferensi Warna</h1>
+
+        <fieldset>
+            <legend>Warna</legend>
+
+            <div class="item">
+                <span>1. Warna latarbelakang</span>
+                <div class="color-box" id="bgColorBox" onclick="openPicker('bg')"></div>
+            </div>
+
+            <div class="item">
+                <span>2. Warna teks</span>
+                <div class="color-box" id="textColorBox" onclick="openPicker('text')"></div>
+            </div>
+
+        </fieldset>
+
+        <button id="simpanBtn">Simpan</button>
+    </div>
+
+    <div class="modal-overlay" id="modalOverlay">
+        <div class="color-picker-modal">
+            <div class="modal-header">
+                <button class="btn-cancel" onclick="closePicker()">Cancel</button>
+                <span class="modal-title">Choose a color</span>
+                <button class="btn-select" onclick="selectColor()">Select</button>
+            </div>
+
+            <div class="color-grid" id="colorGrid"></div>
+            <hr class="separator">
+            <div class="color-grid" id="grayGrid"></div>
+            <hr class="separator">
+            <div class="custom-label">Custom</div>
+            <div class="custom-colors" id="customColors">
+                <div class="custom-add">
+                    +
+                    <input type="color" id="customColorInput" onchange="addCustomColor(this.value)">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,223 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #3f6aa3;
+    color: red; 
+    padding: 30px;
+    transition: 0.3s ease;
+}
+
+.container {
+    width: 80%;
+    max-width: 600px;
+    margin: 0;
+}
+
+h1 {
+    font-size: 45px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+fieldset {
+    border: 2px solid white;
+    padding: 25px;
+    margin-bottom: 15px;
+}
+
+legend {
+    font-size: 18px;
+}
+
+.item {
+    margin: 15px 0;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.color-box {
+    width: 70px;
+    height: 35px;
+    border: 4px solid #fff;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#bgColorBox {
+    background-color: #3f6aa3;
+}
+
+#textColorBox {
+    background-color: red;
+}
+
+button {
+    padding: 6px 15px;
+    cursor: pointer;
+}
+
+/* generic color inputs are not used directly in main UI */
+/* the custom palette uses a hidden input inside .custom-add for adding new colors */
+.custom-add input[type="color"] {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    cursor: pointer;
+}
+/* ===== Modal Overlay ===== */
+.modal-overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-overlay.active {
+  display: flex;
+}
+
+/* ===== Color Picker Modal ===== */
+.color-picker-modal {
+  background: #2d2d2d;
+  border-radius: 14px;
+  padding: 16px 20px;
+  width: 380px;
+  /* ensure modal never extends past viewport and can scroll if needed */
+  max-height: calc(100vh - 40px);
+  overflow-y: auto;
+  color: #fff;
+  font-family: sans-serif;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.5);
+}
+
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.modal-header .btn-cancel {
+  background: #4a4a4a;
+  color: #fff;
+  border: none;
+  padding: 6px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.9em;
+}
+
+.modal-header .btn-cancel:hover {
+  background: #5a5a5a;
+}
+
+.modal-header .modal-title {
+  font-weight: bold;
+  font-size: 1em;
+}
+
+.modal-header .btn-select {
+  background: #2e7d32;
+  color: #fff;
+  border: none;
+  padding: 6px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 0.9em;
+}
+
+.modal-header .btn-select:hover {
+  background: #388e3c;
+}
+
+.color-grid {
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  gap: 6px;
+  margin-bottom: 10px;
+}
+
+.color-swatch {
+  width: 100%;
+  aspect-ratio: 1;
+  border-radius: 6px;
+  cursor: pointer;
+  border: 2px solid transparent;
+  position: relative;
+  transition: border-color 0.15s;
+}
+
+.color-swatch:hover {
+  border-color: rgba(255, 255, 255, 0.5);
+}
+
+.color-swatch.selected {
+  border-color: #fff;
+}
+
+.color-swatch.selected::after {
+  content: "✓";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #fff;
+  font-size: 1.1em;
+  font-weight: bold;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+.separator {
+  border: none;
+  border-top: 1px solid #444;
+  margin: 10px 0;
+}
+
+.custom-label {
+  font-size: 0.9em;
+  color: #aaa;
+  margin-bottom: 8px;
+}
+
+.custom-colors {
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  gap: 6px;
+}
+
+.custom-add {
+  width: 100%;
+  aspect-ratio: 1;
+  border-radius: 6px;
+  cursor: pointer;
+  border: 2px dashed #666;
+  background: #3a3a3a;
+  color: #aaa;
+  font-size: 1.4em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.custom-add:hover {
+  border-color: #999;
+  color: #fff;
+}
+
+.custom-add input[type="color"] {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  cursor: pointer;
+}
