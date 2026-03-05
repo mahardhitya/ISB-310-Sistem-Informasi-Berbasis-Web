@@ -1,0 +1,65 @@
+/* Background utama dengan logo segitiga tiling */
+body {
+    margin: 0;
+    padding: 0;
+    background-image: url('../assets/logo.png'); 
+    background-repeat: repeat;
+    background-size: 80px; /* Logo mengecil/bertambah banyak saat zoom out */
+    background-attachment: fixed;
+    font-family: Arial, sans-serif;
+}
+
+.outer-border {
+    max-width: 900px;
+    margin: 20px auto;
+    /* removed heavy outer frame to match original design */
+    background-color: #e59a34; /* Warna oranye emas */
+    /* box-shadow can stay for subtle depth */
+    box-shadow: 0 0 20px rgba(0,0,0,0.5);
+}
+
+/* Header Gedung Tiling */
+.header-tiling {
+    height: 350px;
+    background-image: url('../assets/gedungitenas.png'); /* Gambar gedung */
+    background-repeat: repeat;
+    background-size: 33.33% 50%; /* 3 kolom, 2 baris */
+    border-bottom: 2px solid #5a3a22;
+}
+
+.main-layout { display: flex; }
+
+/* Sidebar */
+.sidebar {
+    width: 180px;
+    border-right: 2px solid #5a3a22;
+    padding-top: 20px;
+}
+.sidebar ul { list-style: none; padding: 0; margin: 0; }
+.sidebar li { border-bottom: 1px solid #5a3a22; padding: 10px 20px; }
+.sidebar a { text-decoration: none; color: #4b0082; font-weight: bold; font-size: 14px; }
+
+/* Content */
+.content { flex: 1; padding: 25px; color: #000; }
+h1 { font-size: 22px; margin-top: 0; }
+.intro-text { font-size: 13px; text-align: justify; line-height: 1.4; }
+.sub-title { font-size: 18px; margin-top: 20px; }
+.line-separator { border: 0; border-top: 1px solid #5a3a22; margin: 20px 0; }
+
+/* Form & Output */
+.form-row, .out-row { display: flex; align-items: center; margin-bottom: 15px; font-size: 14px; }
+.form-row label, .out-row span:first-child { width: 220px; font-weight: bold; }
+.form-row span, .out-row span:nth-child(2) { margin-right: 10px; }
+select { padding: 3px; width: 100px; }
+.out-box { background: #fff; border: 1px solid #000; width: 200px; height: 20px; display: inline-block; padding: 2px 5px; }
+
+button { margin-right: 5px; cursor: pointer; text-transform: lowercase; }
+
+/* Detail Penjelasan */
+.explanation-section { margin-top: 30px; }
+.explanation-section h2 { font-size: 20px; border-bottom: 2px solid #000; padding-bottom: 5px; }
+.desc-text { text-align: justify; line-height: 1.6; font-size: 14px; }
+
+/* Footer */
+.main-footer { background-color: #ff9800; /* border-top removed */ padding: 5px 0; }
+.footer-content { text-align: center; font-size: 12px; font-weight: bold; }
