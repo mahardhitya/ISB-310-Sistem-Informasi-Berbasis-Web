@@ -1,0 +1,234 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-image: url("../../evaluasi1/assets/logo.png");
+  background-repeat: repeat;
+  background-size: 150px 150px;
+  font-family: "Times New Roman", Times, serif;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  min-height: 100vh;
+  padding: 10px 0;
+}
+
+.main-card {
+  width: 720px;
+  border: 5px solid #8b4513;
+  background-color: #d4a017;
+  box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.4);
+}
+
+.header-banner {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  border-bottom: 3px solid #8b4513;
+  overflow: hidden;
+}
+
+.header-banner img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.content-wrapper {
+  display: flex;
+}
+
+.sidebar {
+  width: 130px;
+  min-width: 130px;
+  display: flex;
+  flex-direction: column;
+  padding: 10px 5px;
+}
+
+.nav-link {
+  display: block;
+  text-align: center;
+  padding: 10px 10px;
+  color: #7b2d8e;
+  text-decoration: underline;
+  font-size: 0.95em;
+  cursor: pointer;
+  border-bottom: 1px solid #2f5d9a;
+}
+
+.nav-link:hover {
+  color: #5a1068;
+  font-weight: bold;
+}
+
+.nav-link.active {
+  font-weight: bold;
+}
+
+.main-content {
+  flex: 1;
+  padding: 15px 20px;
+}
+
+.home-table {
+  border-collapse: collapse;
+}
+
+.home-table td {
+  padding: 5px 8px;
+  font-size: 0.9em;
+  vertical-align: middle;
+}
+
+.btn-shout {
+  padding: 1px 25px;
+  font-size: 0.6em;
+  cursor: pointer;
+  background-color: #000000;
+  color: #ffde24;
+  border: 2px outset #fefefe;
+}
+
+.btn-shout:hover {
+  background-color: #444;
+}
+
+.menu-wrapper {
+  display: flex;
+  gap: 0;
+}
+
+.menu-table {
+  border-collapse: collapse;
+}
+
+.menu-table th,
+.menu-table td {
+  border: 1px solid #cca800;
+  padding: 2px 6px;
+  font-size: 0.85em;
+  font-weight: bold;
+  text-align: left;
+  vertical-align: middle;
+  background-color: #ffde24;
+  white-space: nowrap;
+}
+
+.menu-table th:first-child,
+.menu-table td:first-child {
+  width: 20px;
+  text-align: left;
+}
+
+.menu-table th:last-child,
+.menu-table td:last-child {
+  width: 70px;
+}
+
+.menu-table th {
+  background-color: #ffde24;
+}
+
+.menu-table input[type="number"] {
+  width: 100%;
+  padding: 1px 3px;
+  font-size: 0.85em;
+  box-sizing: border-box;
+  border: 1px solid #999;
+}
+
+.menu-table input[type="text"] {
+  width: 100%;
+  padding: 1px 3px;
+  font-size: 0.85em;
+  border: 1px solid #999;
+  background-color: #fff;
+  box-sizing: border-box;
+}
+
+.summary-label {
+  text-align: right !important;
+}
+
+.reset-cell {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #dfdede;
+  border: 1px solid #cca800;
+  padding: 0 5px;
+}
+
+.btn-reset-menu {
+  padding: 2px 25px;
+  font-size: 0.5em;
+  cursor: pointer;
+  border: 1px outset #fefefe;
+  background-color: #000000;
+  color: #ffde24;
+}
+
+.btn-reset-menu:hover {
+  background-color: #222;
+}
+
+.calc-table {
+  border-collapse: collapse;
+  margin-bottom: 8px;
+}
+
+.calc-table td {
+  padding: 4px 5px;
+  font-size: 0.9em;
+  vertical-align: middle;
+}
+
+.calc-table input[type="number"],
+.calc-table input[type="text"] {
+  width: 80px;
+  padding: 2px 5px;
+  font-size: 0.88em;
+  border: 1px solid #999;
+}
+
+.calc-table select {
+  padding: 2px 4px;
+  font-size: 0.88em;
+}
+
+.form-buttons {
+  margin-top: 8px;
+  margin-bottom: 5px;
+}
+
+.form-buttons button {
+  padding: 2px 25px;
+  font-size: 0.6em;
+  cursor: pointer;
+  border: 2px outset #fefefe;
+  background-color: #000000;
+  margin-right: 3px;
+  color: #ffde24;
+}
+
+.form-buttons button:hover {
+  background-color: #000000;
+}
+
+.footer {
+  background-color: #efb402;
+  text-align: center;
+  padding: 2px 0;
+  font-size: 0.85em;
+  color: #000;
+}
+
+.footer p {
+  margin: 2px 0;
+}
